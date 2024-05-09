@@ -18,13 +18,16 @@
 
     <main>
         <section class="todo">
-            <form action="todo-list">
-                <input type="checkbox" class="item-completed">
-                <input type="text" placeholder="Add a task" class="item-description">
-                <button id="add">Add</button>
-            </section>
-
+            <template id="itemTemplate">
+                <form action="todo-list">
+                    <input type="checkbox" class="item-completed">
+                    <input type="text" placeholder="Add a task" class="item-description">
+                </section>
+                
             </form>
+            
+        </template>
+        <button id="add">Add</button>
     </main>
 
 
