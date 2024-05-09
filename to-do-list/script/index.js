@@ -5,12 +5,20 @@ const itemTemplate = document.getElementById('itemTemplate');
 const addButton = document.getElementById('add');
 
 //fetching item using local storage
-
+let items = getItems();
 function getItems() {
     const value = localStorage.getItem('todo') || "[]";
 
-    console.log(value);
+    return JSON.parse(value);
+
+   
 }
 
-getItems();
+function setItems(items){
+    
+}
+
+console.log(items);
+
+
 
