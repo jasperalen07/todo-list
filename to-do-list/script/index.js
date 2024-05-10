@@ -26,6 +26,11 @@ function addItem(){
         completed: false
     });
     setItems(items);
+    refreshList();
+}
+
+function refreshList(){
+    
 }
 
 console.log(items);
