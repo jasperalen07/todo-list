@@ -17,16 +17,17 @@
     </header>
 
     <main>
-        <section class="todo">
-            <template id="itemTemplate">
-                <form action="todo-list">
-                    <input type="checkbox" class="item-completed">
-                    <input type="text" placeholder="Add a task" class="item-description">
-                </section>
-                
-            </form>
-            
+        <section id="todo" class="todo">
+          
+        </section>
+
+        <template id="itemTemplate">
+            <div class="todo-item">
+                <input type="checkbox" class="item-completed">
+                <input type="text" placeholder="Add a task" class="item-description">
+            </div>
         </template>
+
         <button id="add">Add</button>
     </main>
 
