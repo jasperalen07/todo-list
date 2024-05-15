@@ -36,7 +36,7 @@ function updateItem(item, key , value ){
 }
 
 function refreshList(){
-
+    //Sorting the items when a task is complete it must go in the bottom
     items.sort((a,b) => {
         if(a.completed){
             return 1;
@@ -45,7 +45,7 @@ function refreshList(){
         if(b.completed){
             return -1;
         }
-
+        //This will prioritize your checkboxes based on your tasks
         return a.description < b.description ? -1 : 1;
     })
     toDoItems.innerHTML = "";
@@ -59,7 +59,7 @@ function refreshList(){
         completedInput.checked = item.completed;
 
         descriptionInput.addEventListener("change", () => {
-            updateItem(item, "description", completedInput.value);
+            updateItem(item, "description", descriptionInput.value);
         });
 
        completedInput.addEventListener("change", () => {
