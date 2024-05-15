@@ -64,7 +64,7 @@ function refreshList(){
 
        completedInput.addEventListener("change", () => {
             updateItem(item, "completed", 
-            completedInputInput.checked);
+            completedInput.checked);
         });
 
         toDoItems.append(itemElement);
