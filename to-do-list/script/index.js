@@ -35,7 +35,9 @@ function updateItem(item, key , value ){
     refreshList();
 }
 
+// The foundation of this project
 function refreshList(){
+    // one of the last things 
     //Sorting the items when a task is complete it must go in the bottom
     items.sort((a,b) => {
         if(a.completed){
@@ -50,6 +52,7 @@ function refreshList(){
     })
     toDoItems.innerHTML = "";
 
+    // How the task gets cloned
     for ( const item of items){
         const itemElement =  itemTemplate.content.cloneNode(true);
         const descriptionInput = itemElement.querySelector('.item-description');
@@ -72,7 +75,7 @@ function refreshList(){
         
     }
 }
-
+// the function when your adding another task
 addButton.addEventListener('click', () => {
      addItem();
 })
